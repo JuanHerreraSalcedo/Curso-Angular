@@ -1,15 +1,17 @@
 <form action="" class="form-row">
     <div class="form-group col-lg-2">
         <label for="nombre" class="sr-only">Nombre</label>
-        <input type="text" name="nombre" id="nombre" placeholder="Nombre" class="form-control"
-            [(ngModel)]="nombreInput">
+        <input type="text"
+         name="nombre" id="nombre" placeholder="Nombre" class="form-control" #nombreInput>
     </div>
+    <!-- [(ngModel)]="nombreInput" este codigo va en la linea 5 -->
     <div class="form-group col-lg-2">
         <label for="apellido" class="sr-only">Apellido</label>
-        <input type="text" name="apellido" id="apellido" placeholder="apellido" class="form-control"
-            [(ngModel)]="apellidoInput">
+        <input type="text" name="apellido" id="apellido" placeholder="apellido" class="form-control" #apellidoInput>
     </div>
+    <!-- [(ngModel)]="apellidoInput" este codigo va en la linea 11 -->
     <div class="col-6">
-        <button type="submit" class="btn btn-primary" (click)="agregarPersona()">Agregar</button>
+        <button type="submit" class="btn btn-primary" 
+        (click)="agregarPersona()">Agregar</button>
     </div>
 </form>
