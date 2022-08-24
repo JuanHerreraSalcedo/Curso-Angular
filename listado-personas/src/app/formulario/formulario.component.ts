@@ -13,10 +13,10 @@ export class FormularioComponent implements OnInit {
 
   //@Output() personaCreada = new EventEmitter<Persona>()
 
-  // nombreInput:string = '';  
-  // apellidoInput:string = '';  
-  @ViewChild('nombreInput') nombreInput: ElementRef;
-  @ViewChild('apellidoInput') apellidoInput: ElementRef;
+   nombreInput:string ;  
+   apellidoInput:string ;  
+  // @ViewChild('nombreInput') nombreInput: ElementRef;
+  // @ViewChild('apellidoInput') apellidoInput: ElementRef;
 
   constructor(private logginService: LogginService,
               private personasService: PersonasService){
@@ -29,7 +29,8 @@ export class FormularioComponent implements OnInit {
   }
 
   agregarPersona() {
-    let persona1 = new Persona(this.nombreInput.nativeElement.value, this.apellidoInput.nativeElement.value);
+    let persona1 = new Persona(this.nombreInput, this.apellidoInput);
+    // let persona1 = new Persona(this.nombreInput.nativeElement.value, this.apellidoInput.nativeElement.value);
     //this.logginService.enviarMensajeAConsola("Enviamos persona con nombre: " + persona1.nombre + " apellido: " + persona1.apellido);
     //this.personaCreada.emit(persona1);
     this.personasService.agregarPersona(persona1);
