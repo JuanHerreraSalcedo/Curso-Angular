@@ -1,6 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
-import { Persona } from '../persona.model';
-import { PersonasService } from '../personas.services';
+import { Persona } from '../../persona.model';
+import { PersonasService } from '../../personas.services';
 
 @Component({
   selector: 'app-persona',

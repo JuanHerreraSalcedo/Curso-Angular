@@ -1,22 +1,27 @@
-<form class="item">
+<div class="box">
+
+<form class="item" #f="ngForm" (ngSubmit)="f.form.valid && onGuardarPersona()">
 <!-- <form action="" class="form-row"> -->
     <!-- <div class="form-group col-lg-2">
         <label for="nombre" class="sr-only">Nombre</label> -->
         <input type="text"
          name="nombre" id="nombre" placeholder="Nombre" 
-         [(ngModel)]="nombreInput">
+         [(ngModel)]="nombreInput" required>
          <!-- class="form-control" #nombreInput -->
     <!-- </div> -->
     <!-- [(ngModel)]="nombreInput" este codigo va en la linea 5 -->
     <!-- <div class="form-group col-lg-2">
         <label for="apellido" class="sr-only">Apellido</label> -->
         <input type="text" name="apellido" id="apellido" placeholder="apellido" 
-        [(ngModel)]="apellidoInput">
+        [(ngModel)]="apellidoInput" required>
         <!-- class="form-control" #apellidoInput -->
     <!-- </div> -->
     <!-- [(ngModel)]="apellidoInput" este codigo va en la linea 11 -->
     <!-- <div class="col-6"> -->
-        <button type="submit" 
-        (click)="agregarPersona()">+</button>
+        <button type="submit" style="cursor: pointer">+</button>
+        <!-- (click)="agregarPersona()" -->
     <!-- </div> -->
+        <button *ngIf="index !=null" type="submit" style="cursor: pointer" class="buttonRed" (click)="eliminarPersona()">-</button>
+        
 </form>
+</div>
