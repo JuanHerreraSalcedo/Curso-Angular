@@ -5,14 +5,5 @@
   <!-- </div> -->
   <hr>
 </div>
-
-<div class="box">
-  <app-persona *ngFor="let personaElemento of personas; let i = index" [persona]="personaElemento" [indice]="i">
-  </app-persona>
-</div>
-<div class="box">
-  <app-formulario>
-    <!-- (personaCreada)="personaAgregada($event)" -->
-  </app-formulario>
-
-</div>
+<router-outlet></router-outlet>
+<!-- <app-personas></app-personas> -->
