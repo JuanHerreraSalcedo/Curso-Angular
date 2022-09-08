@@ -4,7 +4,7 @@ import { Persona } from "./persona.model";
 
 @Injectable()
 export class PersonasService{
-    personas: Persona[] = [new Persona('Juan', 'Herrera'), new Persona('Laura', 'Ruiz')];
+    personas: Persona[] = [new Persona('Juan', 'Herrera Salcedo'), new Persona('Laura', 'Ruiz')];
 
     saludar = new EventEmitter<number>();
 
